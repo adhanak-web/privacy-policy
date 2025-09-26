@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سياسة الخصوصية - أذانك</title>
+    <title>سياسة الخصوصية - المؤذن الذكي</title>
     <style>
         * {
             margin: 0;
@@ -20,17 +20,18 @@
         }
 
         header {
-            background: linear-gradient(135deg, #2c5f2d 0%, #4a8f4e 100%);
+            background: linear-gradient(135deg, #D4AF37 0%, #E6C35C 100%);
             color: white;
             padding: 60px 20px;
             text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
         }
 
         header h1 {
             font-size: 2.5rem;
             margin-bottom: 10px;
             font-weight: 600;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.2);
         }
 
         header p {
@@ -70,7 +71,7 @@
         }
 
         h2 {
-            color: #2c5f2d;
+            color: #D4AF37;
             font-size: 1.6rem;
             margin-bottom: 20px;
             padding-bottom: 10px;
@@ -80,7 +81,7 @@
         }
 
         h2 .number {
-            background: #2c5f2d;
+            background: #D4AF37;
             color: white;
             width: 35px;
             height: 35px;
@@ -91,6 +92,7 @@
             margin-left: 15px;
             font-size: 1.1rem;
             flex-shrink: 0;
+            font-weight: bold;
         }
 
         h3 {
@@ -119,27 +121,27 @@
 
         ul li::before {
             content: "◈";
-            color: #4a8f4e;
+            color: #D4AF37;
             position: absolute;
             right: 0;
             font-weight: bold;
         }
 
         .highlight-box {
-            background: #f0f8f0;
-            border-right: 4px solid #4a8f4e;
+            background: #fdf9f0;
+            border-right: 4px solid #D4AF37;
             padding: 20px;
             margin: 20px 0;
             border-radius: 4px;
         }
 
         .highlight-box strong {
-            color: #2c5f2d;
+            color: #B8860B;
         }
 
         .contact-section {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            border: 2px solid #dee2e6;
+            background: linear-gradient(135deg, #fdf9f0 0%, #f5f0e0 100%);
+            border: 2px solid #e0d3a5;
             padding: 25px;
             border-radius: 8px;
             text-align: center;
@@ -147,13 +149,13 @@
         }
 
         .contact-section h3 {
-            color: #2c5f2d;
+            color: #B8860B;
             margin-bottom: 15px;
         }
 
         .contact-email {
             display: inline-block;
-            background: #2c5f2d;
+            background: #D4AF37;
             color: white;
             padding: 12px 30px;
             border-radius: 25px;
@@ -161,12 +163,14 @@
             font-size: 1.1rem;
             margin-top: 10px;
             transition: all 0.3s ease;
+            font-weight: 600;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
         .contact-email:hover {
-            background: #4a8f4e;
+            background: #C59E2A;
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(44, 95, 45, 0.3);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
         }
 
         .toc {
@@ -182,6 +186,7 @@
             margin-bottom: 15px;
             border-bottom: none;
             padding-bottom: 0;
+            color: #D4AF37;
         }
 
         .toc ul {
@@ -194,6 +199,7 @@
             border-right: 3px solid transparent;
             transition: all 0.3s ease;
             cursor: pointer;
+            color: #555;
         }
 
         .toc ul li::before {
@@ -201,23 +207,20 @@
         }
 
         .toc ul li:hover {
-            background: #f0f8f0;
-            border-right-color: #4a8f4e;
+            background: #fdf9f0;
+            border-right-color: #D4AF37;
             padding-right: 25px;
         }
 
         footer {
-            background: #2c5f2d;
+            background: #D4AF37;
             color: white;
             text-align: center;
-            padding: 30px 20px;
+            padding: 20px 20px;
             margin-top: 50px;
-        }
-
-        footer p {
-            color: white;
-            margin: 5px 0;
-            opacity: 0.9;
+            box-shadow: inset 0 4px 6px rgba(0,0,0,0.1);
+            font-weight: 500;
+            opacity: 0.95;
         }
 
         @media (max-width: 768px) {
@@ -242,6 +245,11 @@
                 height: 30px;
                 font-size: 1rem;
             }
+            
+            footer {
+                padding: 15px 10px;
+                font-size: 0.95rem;
+            }
         }
 
         .fade-in {
@@ -256,7 +264,7 @@
 </head>
 <body>
     <header>
-        <h1>سياسة الخصوصية - أذانك</h1>
+        <h1>سياسة الخصوصية - المؤذن الذكي</h1>
     </header>
 
     <div class="last-updated">
@@ -264,7 +272,6 @@
     </div>
 
     <div class="container">
-        <!-- جدول المحتويات -->
         <div class="toc fade-in">
             <h2>📋 محتويات السياسة</h2>
             <ul id="tocList">
@@ -279,19 +286,17 @@
             </ul>
         </div>
 
-        <!-- المقدمة -->
         <div class="section fade-in">
             <p style="font-size: 1.1rem; line-height: 1.9;">
-                نحن في تطبيق "أذانك" نلتزم بأقصى درجات الشفافية في التعامل مع بيانات المستخدمين ونحرص على حماية خصوصيتك أثناء استخدام التطبيق. سياسة الخصوصية هذه توضح بالتفصيل المعلومات التي نقوم بجمعها، كيفية استخدامها، الإجراءات الأمنية المتبعة، حقوق المستخدمين، وطريقة التواصل معنا لأي استفسار أو شكوى.
+                نحن في تطبيق "المؤذن الذكي" نلتزم بأقصى درجات الشفافية في التعامل مع بيانات المستخدمين ونحرص على حماية خصوصيتك أثناء استخدام التطبيق. سياسة الخصوصية هذه توضح بالتفصيل المعلومات التي نقوم بجمعها، كيفية استخدامها، الإجراءات الأمنية المتبعة، حقوق المستخدمين، وطريقة التواصل معنا لأي استفسار أو شكوى.
             </p>
         </div>
 
-        <!-- القسم 1 -->
         <div class="section fade-in" id="section1">
             <h2><span class="number">1</span> المعلومات التي نقوم بجمعها</h2>
             
             <div class="highlight-box">
-                <strong>ملاحظة هامة:</strong> تطبيق "أذانك" لا يقوم بجمع أي معلومات شخصية مباشرة مثل: الاسم، البريد الإلكتروني، رقم الهاتف، أو الموقع الجغرافي الدقيق.
+                <strong>ملاحظة هامة:</strong> تطبيق "المؤذن الذكي" لا يقوم بجمع أي معلومات شخصية مباشرة مثل: الاسم، البريد الإلكتروني، رقم الهاتف، أو الموقع الجغرافي الدقيق.
             </div>
 
             <h3>1.1 البيانات غير الشخصية</h3>
@@ -304,7 +309,6 @@
             <p><strong>جميع هذه البيانات عامة وغير مرتبطة بهويتك الشخصية، ولا يمكن استخدامها لتحديد هويتك شخصيًا.</strong></p>
         </div>
 
-        <!-- القسم 2 -->
         <div class="section fade-in" id="section2">
             <h2><span class="number">2</span> الاشتراكات والإعلانات</h2>
             
@@ -321,7 +325,6 @@
             </ul>
         </div>
 
-        <!-- القسم 3 -->
         <div class="section fade-in" id="section3">
             <h2><span class="number">3</span> استخدام البيانات</h2>
             <p>نستخدم البيانات التي يتم جمعها تلقائيًا لأغراض محددة فقط، تشمل:</p>
@@ -336,7 +339,6 @@
             </div>
         </div>
 
-        <!-- القسم 4 -->
         <div class="section fade-in" id="section4">
             <h2><span class="number">4</span> مشاركة البيانات مع أطراف ثالثة</h2>
             <p><strong>نلتزم بعدم مشاركة أي معلومات شخصية مع أي طرف ثالث.</strong></p>
@@ -348,7 +350,6 @@
             <p>نضمن أن أي طرف ثالث يتعامل مع بيانات التطبيق يلتزم بنفس معايير الخصوصية والأمان المعمول بها لدينا.</p>
         </div>
 
-        <!-- القسم 5 -->
         <div class="section fade-in" id="section5">
             <h2><span class="number">5</span> حماية البيانات</h2>
             <p>نحرص على استخدام أحدث الأساليب والتقنيات لحماية بيانات المستخدمين من أي اختراق أو وصول غير مصرح به، وتشمل:</p>
@@ -361,7 +362,6 @@
             <p><strong>هدفنا هو الحفاظ على سلامة بياناتك وتأمين تجربة استخدام آمنة لك.</strong></p>
         </div>
 
-        <!-- القسم 6 -->
         <div class="section fade-in" id="section6">
             <h2><span class="number">6</span> حقوق المستخدم</h2>
             <p>كمستخدم لتطبيقنا، لديك حقوق واضحة وموثقة تشمل:</p>
@@ -376,7 +376,6 @@
             </div>
         </div>
 
-        <!-- القسم 7 -->
         <div class="section fade-in" id="section7">
             <h2><span class="number">7</span> التغييرات على سياسة الخصوصية</h2>
             <p>قد يتم تحديث سياسة الخصوصية من وقت لآخر:</p>
@@ -387,7 +386,6 @@
             <p>سيتم إعلام المستخدمين بأي تغييرات من خلال تحديثات التطبيق، ونوصي دائمًا بمراجعة هذه الصفحة بشكل دوري للاطلاع على آخر التحديثات.</p>
         </div>
 
-        <!-- القسم 8 -->
         <div class="section fade-in" id="section8">
             <h2><span class="number">8</span> الاتصال بنا</h2>
             <p>إذا كان لديك أي أسئلة، شكوى، أو استفسار حول سياسة الخصوصية، يمكنك التواصل معنا.</p>
@@ -395,8 +393,8 @@
             <div class="contact-section">
                 <h3>📧 تواصل معنا</h3>
                 <p>نحن ملتزمون بالرد على جميع الاستفسارات بشكل شفاف وواضح</p>
-                <a href="mailto:adhanak.feedback@outlook.com" class="contact-email">
-                    adhanak.feedback@outlook.com
+                <a href="mailto:SmartMoazin.feedback@outlook.com" class="contact-email">
+                    SmartMoazin.feedback@outlook.com
                 </a>
             </div>
             
@@ -407,17 +405,14 @@
     </div>
 
     <footer>
-        <p>© 2025 تطبيق أذانك - جميع الحقوق محفوظة</p>
-        <p>نلتزم بحماية خصوصيتك وأمان بياناتك</p>
+        © 2025 تطبيق المؤذن الذكي - جميع الحقوق محفوظة | نلتزم بحماية خصوصيتك وأمان بياناتك
     </footer>
 
     <script>
-        // تحديث تاريخ آخر تحديث باستخدام التاريخ الميلادي
         const today = new Date();
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
         document.getElementById('lastUpdate').textContent = today.toLocaleDateString('en-US', options);
 
-        // وظيفة التمرير السلس للأقسام
         function scrollToSection(sectionId) {
             const element = document.getElementById(sectionId);
             if (element) {
@@ -427,7 +422,6 @@
             }
         }
 
-        // إضافة تأثير الظهور التدريجي عند التمرير
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -442,7 +436,6 @@
             });
         }, observerOptions);
 
-        // مراقبة جميع الأقسام
         document.querySelectorAll('.section').forEach(section => {
             section.style.opacity = '0';
             section.style.transform = 'translateY(20px)';
@@ -450,7 +443,6 @@
             observer.observe(section);
         });
 
-        // إضافة تأثير التحديد النشط في جدول المحتويات
         window.addEventListener('scroll', () => {
             const sections = document.querySelectorAll('.section[id]');
             const tocItems = document.querySelectorAll('.toc ul li');
@@ -468,12 +460,11 @@
                 item.style.background = '';
                 item.style.borderRightColor = 'transparent';
                 if (current === `section${index + 1}`) {
-                    item.style.background = '#f0f8f0';
-                    item.style.borderRightColor = '#4a8f4e';
+                    item.style.background = '#fdf9f0';
+                    item.style.borderRightColor = '#D4AF37';
                 }
             });
         });
     </script>
 </body>
 </html>
-
